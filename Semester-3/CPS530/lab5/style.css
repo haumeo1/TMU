@@ -1,0 +1,266 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/b1/0b/f4/b10bf456977f6b636dcda734f32b5f58.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+.nav_bar{
+    display: flex;
+    /* padding: 10px 20px; */
+    position: fixed;
+    width: 100%;
+    overflow: wrap;
+    top: 0;
+}
+
+.nav_bar_half_l svg{
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    flex-direction: column;
+    transition: width 0.3s ease, height 0.3s ease;
+    align-items: left
+}
+/*make nav_bar_name in the midle*/
+.nav_bar_name{
+    flex: 1 1 auto;
+    font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+    font-size: 30px;
+    margin-left: 30%;
+    transition: transform 0s ease;
+    margin-top: 10px;
+}
+
+.nav_bar_half_r ul{
+    list-style-type: none;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 1%;
+}
+.nav_bar_half_r ul li{
+    display: inline;
+    margin: 20px;
+}
+.nav_bar_half_r ul li a{
+    text-decoration: wavy;
+    color: white;
+    font-size: 20px;
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.nav_bar_half_r ul li a:hover{
+    color: #e3dc17;
+    font-size: larger;
+}
+.nav_bar_half_r_menu{
+    display: none;
+}
+.nav_bar_half_r_menu div{
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+}
+.copy_right{
+   position: absolute;
+   bottom: 0;
+   margin-left: 90%;
+}
+@media screen and (max-width: 1000px){
+    body{
+        overflow-x: hidden;
+    }
+   .nav_bar_half_r ul{
+       position: absolute;
+       top: 7.5vh;
+       height: 92.5vh;
+       right: 0px;
+       background-color: black;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transform: translate(100%);
+        transition: transform 0 ease;
+        margin: 0px;
+        z-index: 1000 !important;
+   }
+   .nav_bar_half_r ul li{
+       display: block;
+       margin: 50px;
+   }
+   .nav_bar_half_r_menu{
+         display: block;
+         cursor: pointer;
+         margin-top: 30px;
+   }
+    .nav_bar_half_r_menu div{
+         width: 25px;
+         height: 2px;
+         background-color: white;
+         margin: 5px;
+         z-index: 1001 !important;
+    }
+    .copy_right{
+        display: none;
+    }
+    .nav_bar_half_l svg{
+        display: none;
+    }
+    .body .description-line{
+        display: none;
+    }
+
+}
+.nav_bar_half_r .nav_active{
+    transform: translate(0%);
+    transition: transform 0.5s ease;
+    z-index: 999 !important;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    color: thistle;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+
+    
+}
+.body .message-packet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: thistle;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media screen and (max-width:1200px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav_bar_half_r_menu div{
+        display: flex;
+        z-index: 1001 !important;
+   }
+   .nav_bar_half_r ul{
+       position: absolute;
+       top: 7.5vh;
+       height: 92.5vh;
+       right: 0px;
+       background-color: black;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transform: translate(100%);
+        transition: transform 0 ease;
+        margin: 0px;
+        z-index: 999 !important;
+   }
+   .nav_bar_half_r ul li{
+       display: block;
+       margin: 50px;
+   }
+   .nav_bar_half_r_menu{
+         display: block;
+         cursor: pointer;
+         margin-top: 30px;
+   }
+    .nav_bar_half_r_menu div{
+         width: 25px;
+         height: 2px;
+         background-color: white;
+         margin: 5px;
+    }
+    .copy_right{
+        display: none;
+    }
+    .nav_bar_half_l svg{
+        display: none;
+    }
+    .nav_bar_name{
+        display: none;
+    }
+    .body .description-line{
+        display: none;
+    }
+    .body .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    color: thistle;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+
+}
+.body .message-packet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: thistle;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+}
+
+button{
+    background-color: #abbbb0;
+    color: white;
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 10%;
+    font-size: 25px;
+}
+button:hover{
+    background-color: #a0cf14;
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+.message-packet .form-control{
+    width: 1000px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(196, 27, 64);
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+
+}
