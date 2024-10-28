@@ -2,17 +2,19 @@ function validateAndDisplay() {
     const name = document.getElementById('name').value;
     const address = document.getElementById('email').value;
     const phone = document.getElementById('message').value;
-
-   
-    finalDisplay.textContent = '';
-
+    // change the style of the input if it is valid
+    const doc = document.getElementsByClassName('form-control')
     const nameRegex = /^[A-Za-z\s]+$/;
     const phoneRegex = /^\d{3}\d{3}\d{4}$/;
     if (nameRegex.test(name) && phoneRegex.test(phone)) {
         const transformedPhone = phone.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
         document.getElementById('name').value = name;
         document.getElementById('email').value = address;
-        document.getElementById('message').value = transformedPhone;}
+        document.getElementById('message').value = transformedPhone;
+        // add a class to doc
+        for (let i = 0; i < doc.length; i++) {
+            doc[i].classList.add('valid');
+        }}
 
     // Validate name and phone
     if (!nameRegex.test(name)) {
@@ -20,21 +22,33 @@ function validateAndDisplay() {
         return;
     }
     if (!phoneRegex.test(phone)) {
-        window.alert('Phone number must be in the format 416-555-5555.');
+        window.alert('Phone number must be in the format 416-555-5555.\n10 digits only.');
         return;
     }
     
 }
 
 // Problem 2: Real-Time Character Count
-document.getElementById('textArea').addEventListener('input', function() {
+document.getElementById('email').addEventListener('input', function() {
     const text = this.value;
     const charCount = text.length;
     const letterCount = text.replace(/[^A-Za-z]/g, '').length;
-
-    document.getElementById('countDisplay').textContent = `Character Count: ${charCount}`;
-    document.getElementById('letterCountDisplay').textContent = `Letter Count: ${letterCount}`;
+    document.getElementsByClassName('countDisplay')[1].innerHTML = `Total:${charCount}`;
+    document.getElementsByClassName('countDigit')[1].innerHTML = `Letter:${letterCount}`;
 });
+document.getElementById('name').addEventListener('input', function() {
+    const text = this.value;
+    const charCount = text.length;
+    const letterCount = text.replace(/[^A-Za-z]/g, '').length;
+    document.getElementsByClassName('countDisplay')[0].innerHTML = `Total:${charCount}`;
+    document.getElementsByClassName('countDigit')[0].innerHTML = `Letter:${letterCount}`;
+});
+document.getElementById('message').addEventListener('input', function() {
+    const text = this.value;
+    const charCount = text.length;
+    document.getElementsByClassName('countDisplay')[2].innerHTML = `Total:${charCount}`;
+});
+
 
 // Problem 3: Full-Screen Image with jQuery
 $('#img1').on('click', function() {
