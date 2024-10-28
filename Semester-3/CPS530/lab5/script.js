@@ -10,8 +10,6 @@ function validateAndDisplay() {
     const phoneRegex = /^\d{3}\d{3}\d{4}$/;
     if (nameRegex.test(name) && phoneRegex.test(phone)) {
         const transformedPhone = phone.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
-
-        //change directly into the input box
         document.getElementById('name').value = name;
         document.getElementById('email').value = address;
         document.getElementById('message').value = transformedPhone;}
