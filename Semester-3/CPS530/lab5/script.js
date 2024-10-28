@@ -51,7 +51,7 @@ document.getElementById('message').addEventListener('input', function() {
 
 
 // Problem 3: Full-Screen Image with jQuery
-$('#img1').on('click', function() {
+$('#image').on('click', function() {
     const imageUrl = $(this).attr('src');
     const fullscreenDiv = $('<div class="fullscreen"></div>');
     const fullScreenImage = $('<img>').attr('src', imageUrl);
