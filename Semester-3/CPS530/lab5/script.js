@@ -1,34 +1,45 @@
+formatPhoneNumber();
 function validateAndDisplay() {
     const name = document.getElementById('name').value;
     const address = document.getElementById('email').value;
     const phone = document.getElementById('message').value;
-    // change the style of the input if it is valid
-    const doc = document.getElementsByClassName('form-control')
+    const doc = document.getElementsByClassName('form-control');
     const nameRegex = /^[A-Za-z\s]+$/;
-    const phoneRegex = /^\d{3}\d{3}\d{4}$/;
+    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
     if (nameRegex.test(name) && phoneRegex.test(phone)) {
-        const transformedPhone = phone.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
         document.getElementById('name').value = name;
         document.getElementById('email').value = address;
-        document.getElementById('message').value = transformedPhone;
-        // add a class to doc
+        document.getElementById('message').value = phone;
         for (let i = 0; i < doc.length; i++) {
             doc[i].classList.add('valid');
-        }}
-
-    // Validate name and phone
+        }erew
+    }
     if (!nameRegex.test(name)) {
         window.alert('Name can only contain letters.');
         return;
     }
     if (!phoneRegex.test(phone)) {
-        window.alert('Phone number must be in the format 416-555-5555.\n10 digits only.');
+        window.alert('Phone number must be in the format 555-555-5555.\n10 digits only.');
         return;
     }
-    
+    if (address === '') {
+        window.alert('Address cannot be empty');
+        return;
+    }
+}
+function formatPhoneNumber() {
+    const phoneInput = document.getElementById('message');
+    phoneInput.addEventListener('input', function() {
+        let phone = phoneInput.value.replace(/\D/g, '');
+        if (phone.length > 3 && phone.length <= 6) {
+            phone = phone.replace(/(\d{3})(\d+)/, '$1-$2');
+        } else if (phone.length > 6) {
+            phone = phone.replace(/(\d{3})(\d{3})(\d+)/, '$1-$2-$3');
+        }
+        phoneInput.value = phone;
+    });
 }
 
-// Problem 2: Real-Time Character Count
 document.getElementById('email').addEventListener('input', function() {
     const text = this.value;
     const charCount = text.length;
@@ -50,21 +61,28 @@ document.getElementById('message').addEventListener('input', function() {
 });
 
 
-// Problem 3: Full-Screen Image with jQuery
-$('#image').on('click', function() {
-    const imageUrl = $(this).attr('src');
-    const fullscreenDiv = $('<div class="fullscreen"></div>');
-    const fullScreenImage = $('<img>').attr('src', imageUrl);
-    const closeButton = $('<i class="material-icons fullscreen-icon">close</i>');
+function imageChange() {
+    $('#image').on('click', function() {
+        const imageUrl = $(this).attr('src');
+        const fullscreenDiv = $('<div class="fullscreen"></div>');
+        const fullScreenImage = $('<img>').attr('src', imageUrl);
+        // icon for close button
+        const closeButton = $('<i class="material-icons fullscreen-icon"><span class="material-symbols-outlined">close</span></i>');
 
-    fullscreenDiv.append(fullScreenImage).append(closeButton);
-    $('body').append(fullscreenDiv);
-
-    // Animate image size
-    fullScreenImage.css('transform', 'scale(1.5)');
-
-    // Close fullscreen on button click
-    closeButton.on('click', function() {
-        fullscreenDiv.remove();
+        fullscreenDiv.append(fullScreenImage).append(closeButton);
+        $('body').append(fullscreenDiv);
+        const originalWidth = fullScreenImage.width();
+        const originalHeight = fullScreenImage.height();
+        fullScreenImage.css({
+            width: 0,
+            height: 0
+        });
+        fullScreenImage.animate({
+            width: originalWidth * 1.5,
+            height: originalHeight * 1.5
+        }, 5000);
+        closeButton.on('click', function() {
+            fullscreenDiv.remove();
+        });
     });
-});
+}
