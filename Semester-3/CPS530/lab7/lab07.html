@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7</title>
+    <link rel="stylesheet" type="text/css" href="lab07.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="headertitle">CPS 530 Lab 7 Part B: Problem 2</h1>
+    </header>
+
+    <form action="https://www2.scs.ryerson.ca/~dromita/cgi-bin/cps530_Lab4-B_result.cgi" method="post"></form>
+        <h2>Name</h2>
+        First name <input type="text" name="FirstName"><br>
+        Last name <input type="text" name="LastName">
+    
+        <h2>Address</h2>
+        Street Adddress <input type="text" name="StreetName"><br>
+        City <input type="text" name="City"><br>
+        Postal Code - Enter 6 characters without any spaces. <input type="text" name="PostalCode"><br>
+        <div>
+            <label for="Province">Choose a province/territory:</label>
+        </div>
+        <select name="Province" id="Province">
+            <option value="Yukon">Yukon Territory</option>
+            <option value="NorthwestTerritories">Northwest Territories</option>
+            <option value="Nunavut">Nunavut</option>
+            <option value="BritishColumbia">British Columbia</option>
+            <option value="Alberta">Alberta</option>
+            <option value="Saskatchewan">Saskatchewan</option>
+            <option value="Manitoba">Manitoba</option>
+            <option value="Ontario">Ontario</option>
+            <option value="Quebec">Quebec</option>
+            <option value="NewBrunswick">New Brunswick</option>
+            <option value="NovaScotia">Nova Scotia</option>
+            <option value="PEI">Prince Edward Island</option>
+            <option value="NFLB">Newfoundland & Labrador</option>
+        </select>
+    
+
+        <h2>Contact</h2>
+        Email <input type="text" name="Email"><br>
+        Phone Number <input type="text" name="PhoneNum">
+
+        <h2>Photo Upload</h2>
+        <input type="file" name="Photo" id="Photo">
+        <hr>
+        <input id = "submitbutton"style="text-align: center; font-size: 18pt;" type="submit">
+    </form>
+
+    
+</body>
+</html>
