@@ -26,7 +26,7 @@ print <<'HTML';
         h1 {
             font-family: 'Pacifico', cursive;
             font-size: 3em;
-            color: #3498db; /* A nice blue color */
+            color: #3498db;
         }
     </style>
 </head>

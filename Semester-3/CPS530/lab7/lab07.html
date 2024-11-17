@@ -1,57 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 7</title>
-    <link rel="stylesheet" type="text/css" href="lab07.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Customer Registration</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
-        <h1 class="headertitle">CPS 530 Lab 7 Part B: Problem 2</h1>
-    </header>
+    <div class="container">
+        <h2>Customer Registration</h2>
+        <form action="https://www2.cs.torontomu.ca/~q1to/cgi-bin/lab07b.cgi" method="post" enctype="multipart/form-data">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" >
 
-    <form action="https://www2.scs.ryerson.ca/~dromita/cgi-bin/cps530_Lab4-B_result.cgi" method="post"></form>
-        <h2>Name</h2>
-        First name <input type="text" name="FirstName"><br>
-        Last name <input type="text" name="LastName">
-    
-        <h2>Address</h2>
-        Street Adddress <input type="text" name="StreetName"><br>
-        City <input type="text" name="City"><br>
-        Postal Code - Enter 6 characters without any spaces. <input type="text" name="PostalCode"><br>
-        <div>
-            <label for="Province">Choose a province/territory:</label>
-        </div>
-        <select name="Province" id="Province">
-            <option value="Yukon">Yukon Territory</option>
-            <option value="NorthwestTerritories">Northwest Territories</option>
-            <option value="Nunavut">Nunavut</option>
-            <option value="BritishColumbia">British Columbia</option>
-            <option value="Alberta">Alberta</option>
-            <option value="Saskatchewan">Saskatchewan</option>
-            <option value="Manitoba">Manitoba</option>
-            <option value="Ontario">Ontario</option>
-            <option value="Quebec">Quebec</option>
-            <option value="NewBrunswick">New Brunswick</option>
-            <option value="NovaScotia">Nova Scotia</option>
-            <option value="PEI">Prince Edward Island</option>
-            <option value="NFLB">Newfoundland & Labrador</option>
-        </select>
-    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" >
 
-        <h2>Contact</h2>
-        Email <input type="text" name="Email"><br>
-        Phone Number <input type="text" name="PhoneNum">
+            <label for="street">Street Address:</label>
+            <input type="text" id="street" name="street" >
 
-        <h2>Photo Upload</h2>
-        <input type="file" name="Photo" id="Photo">
-        <hr>
-        <input id = "submitbutton"style="text-align: center; font-size: 18pt;" type="submit">
-    </form>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" >
 
-    
+            <label for="postalCode">Postal Code (e.g., A1A 1A1):</label>
+            <input type="text" id="postalCode" name="postalCode" >
+
+            <label for="province">Province:</label>
+            <select id="province" name="province" >
+                <option value="">Select Province</option>
+                <option value="ON">Ontario</option>
+                <option value="QC">Quebec</option>
+                <option value="BC">British Columbia</option>
+                <option value="AB">Alberta</option>
+                <option value="MB">Manitoba</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="YT">Yukon</option>
+                <option value="NU">Nunavut</option>
+            </select>
+
+            <label for="phone">Phone Number (10 digits):</label>
+            <input type="text" id="phone" name="phone" >
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" >
+
+            <label for="picture">Upload Photograph:</label>
+            <input type="file" name="picture" >
+
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
 </body>
 </html>

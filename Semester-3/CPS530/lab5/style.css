@@ -1,8 +1,8 @@
-body{
-    background-image: url(https://i.pinimg.com/originals/b1/0b/f4/b10bf456977f6b636dcda734f32b5f58.jpg);
+background-image: url(https://i.pinimg.com/originals/b1/0b/f4/b10bf456977f6b636dcda734f32b5f58.jpg);
     background-size: cover;
     background-repeat: repeat;
-    background-position: center;
+    background-position: center;body{
+    
 }
 .nav_bar{
     display: flex;
