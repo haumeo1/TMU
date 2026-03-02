@@ -3,55 +3,73 @@ SMALL - 5 LINES:
     You returned "DDLRL"
     PASSED!
   Test 2: {-4, -9}, {-14, -22}, [3, 8, 7, 4, 9]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
+    You returned "LDLUD"
+    PASSED!
   Test 3: {-7, -4}, {5, -10}, [8, 6, 4, 4, 4]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
+    You returned "RDRUD"
+    PASSED!
   Test 4: {-6, -1}, {-19, -6}, [5, 6, 4, 9, 6]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
+    You returned "DLLLR"
+    PASSED!
   Test 5: {1, -3}, {11, 5}, [7, 1, 1, 10, 1]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
+    You returned "UURRL"
+    PASSED!
   Test 6: {6, -4}, {18, -7}, [3, 10, 6, 7, 5]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
+    You returned "URDRL"
+    PASSED!
   Test 7: {-8, 0}, {-8, 0}, [4, 9, 1, 1, 7]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
+    You returned "UDDDU"
+    PASSED!
   Test 8: {1, 10}, {-9, 24}, [9, 10, 6, 9, 8]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
+    You returned "ULUDU"
+    PASSED!
   Test 9: {-7, -3}, {19, -3}, [2, 7, 10, 10, 1]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
+    You returned "LRRRR"
+    PASSED!
   Test 10: {-2, 2}, {8, 17}, [4, 3, 9, 5, 10]
-    You returned "DDLRL"
-    FAILED: Finish point incorrect.
-  Passed 1/10 tests in 0 ms
-
-GIGA - 100 LINES:
-  Test 1: {9, 4}, {27, -7}, [2, 8, 3, 10, 8, 9, 9, 2, 10, 3, 7, 5, 5, 4, 1, 3, 8, 6, 10, 10, 1, 8, 4, 9, 10, 2, 2, 9, 10, 5, 2, 8, 3, 8, 10, 9, 9, 5, 5, 9, 5, 7, 5, 6, 1, 8, 4, 10, 3, 3, 9, 5, 1, 6, 4, 6, 4, 6, 1, 8, 2, 6, 7, 2, 3, 4, 5, 8, 8, 5, 10, 10, 6, 9, 5, 7, 5, 6, 6, 4, 10, 4, 3, 10, 4, 5, 10, 8, 10, 10, 1, 10, 4, 4, 3, 8, 9, 9, 4, 10]
-    You returned "DDLRL"
-    FAILED: Solution length must match number of lines.
-  Passed 0/1 tests in 0 ms
+    You returned "UDUUR"
+    PASSED!
+  Passed 10/10 tests in 0 ms
 
 MEDIUM - 10 LINES:
   Test 1: {-2, -6}, {-18, 0}, [2, 7, 3, 8, 4, 1, 3, 10, 4, 2]
-    You returned "DDLRL"
-    FAILED: Solution length must match number of lines.
+    You returned "ULULURUDUL"
+    PASSED!
   Test 2: {-1, -1}, {-8, -2}, [10, 1, 1, 1, 1, 4, 10, 5, 4, 3]
-    You returned "DDLRL"
-    FAILED: Solution length must match number of lines.
+    You returned "LDRRRUDUUD"
+    PASSED!
   Test 3: {0, -9}, {-12, -5}, [8, 5, 10, 10, 5, 3, 8, 4, 2, 9]
-    You returned "DDLRL"
-    FAILED: Solution length must match number of lines.
+    You returned "LULRLDLUDR"
+    PASSED!
   Test 4: {1, 1}, {-25, -15}, [7, 9, 10, 6, 1, 7, 3, 3, 1, 3]
-    You returned "DDLRL"
-    FAILED: Solution length must match number of lines.
+    You returned "DDLLLLLRRL"
+    PASSED!
   Test 5: {9, -10}, {-1, -13}, [2, 1, 8, 2, 4, 9, 9, 2, 1, 1]
-    You returned "DDLRL"
-    FAILED: Solution length must match number of lines.
-  Passed 0/5 tests in 0 ms
+    You returned "DDLLUDUDDD"
+    PASSED!
+  Passed 5/5 tests in 0 ms
+
+LARGE - 20 LINES:
+  Test 1: {3, -7}, {2, 2}, [3, 6, 9, 1, 7, 5, 2, 5, 8, 4, 4, 5, 6, 8, 10, 9, 10, 6, 10, 6]
+    You returned "UULRRUDDUDDUDDUUDUDU"
+    PASSED!
+  Test 2: {1, -9}, {43, -21}, [3, 8, 9, 6, 9, 5, 5, 1, 4, 1, 10, 8, 5, 4, 3, 3, 4, 6, 6, 4]
+    You returned "DDRRRRRDRRRLRLUDUDUD"
+    PASSED!
+  Test 3: {9, 5}, {24, -29}, [4, 8, 9, 4, 10, 4, 7, 7, 2, 10, 4, 9, 3, 5, 1, 5, 2, 6, 4, 9]
+    You returned "DDDDRDDRULRRLLRRLLLR"
+    PASSED!
+  Passed 3/3 tests in 0 ms
+
+MEGA - 50 LINES:
+  Test 1: {-3, -9}, {-66, 10}, [2, 9, 4, 5, 3, 7, 8, 6, 4, 1, 6, 6, 9, 10, 7, 5, 9, 3, 6, 2, 4, 7, 7, 10, 10, 1, 7, 4, 6, 5, 7, 6, 9, 5, 4, 5, 10, 2, 1, 6, 6, 1, 10, 2, 3, 7, 1, 2, 7, 5]
+    You returned "UUULULLLLULLLLLRUDDUDUDUDUUDDUDUUDDUDUUUDUUDDDDUUD"
+    PASSED!
+  Passed 1/1 tests in 0 ms
+
+GIGA - 100 LINES:
+  Test 1: {9, 4}, {27, -7}, [2, 8, 3, 10, 8, 9, 9, 2, 10, 3, 7, 5, 5, 4, 1, 3, 8, 6, 10, 10, 1, 8, 4, 9, 10, 2, 2, 9, 10, 5, 2, 8, 3, 8, 10, 9, 9, 5, 5, 9, 5, 7, 5, 6, 1, 8, 4, 10, 3, 3, 9, 5, 1, 6, 4, 6, 4, 6, 1, 8, 2, 6, 7, 2, 3, 4, 5, 8, 8, 5, 10, 10, 6, 9, 5, 7, 5, 6, 6, 4, 10, 4, 3, 10, 4, 5, 10, 8, 10, 10, 1, 10, 4, 4, 3, 8, 9, 9, 4, 10]
+    You returned "DDRRRLRLDUUDUDUUDUUDULRRLRRUDUDDUUDUDUUDUDUUDDUUDDDUUDUUDDUUDDUDDUDUDUDUDUDUDDUDUDDDUUUDDUDDUUUDUDDU"
+    PASSED!
+  Passed 1/1 tests in 0 ms
 
