@@ -1,0 +1,49 @@
+In this HOME directory are several things:
+
+1)  These instructions that you are now reading.
+
+2)  A file called NAME_AND_ID.txt. Open this file and fill 
+    in your full name and student number. 
+    THIS IS VERY IMPORTANT. FILL THIS IN CORRECTLY OR YOU 
+    RISK A ZERO ON THE MIDTERM.
+    
+3)  Smalltalk directory:  
+
+    The Smalltalk directory contains a pharo image with
+    methods and unit tests (just like lab 2). Fill in the
+    methods, run the unit tests.
+    
+    Launch the pharo image in this directory using the 
+    following command in the terminal:
+
+    pharo-ui midterm_practice.image
+    
+    Make absolutely sure you save the image before exiting 
+    when you're done. Pharo->save & exit. It's also a good 
+    idea to save periodically in case something goes wrong.
+    
+4)  Elixir directory:
+    
+    The Elixir directory contains a mix project (just like
+    labs 3 and 4). Fill in the functions, run the unit tests
+    using the `mix test` command. Tail recursion is NOT 
+    mandatory.
+    
+    You have access to VSCode for this midterm, as well
+    as an Elixir extension for syntax highlighting.
+   
+5)  Cheat sheets directory
+
+    This directory contains the squeak terse guide, and 
+    an elixir cheat sheet. You may also access the elixir 
+    hexdocs in a browser:
+    
+    https://hexdocs.pm/elixir/1.16.1/Kernel.html   
+    
+    You MUST click the Chrome icon on the desktop. The above
+    link, and the HTML cheat sheets, can only be accessed 
+    through the desktop Chrome link.
+   
+As always, make sure you save your code frequently.
+
+Good luck!
