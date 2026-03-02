@@ -1,0 +1,171 @@
+[31m
+[0mProcess>>doTerminationFromAnotherProcess
+Process>>terminate
+PhLImageDescriptionUpdater>>terminateProcess
+PhLDeploymentScript class>>resetImageDescriptionUpdater
+PhLDeploymentScript class>>doAll
+PhLDeploymentScript class>>developmentEnvironmentEnabled:
+SettingDeclaration>>realValue:
+SettingNode>>realValue:
+[ aSettingNode realValue: value ] in StoredSetting(AbstractStoredSetting)>>updateSettingNode: in Block: [ aSettingNode realValue: value ]
+FullBlockClosure(BlockClosure)>>on:do:
+StoredSetting(AbstractStoredSetting)>>updateSettingNode:
+[ :storedSetting | storedSetting updateSettingNode: eachSettingNode ] in [ :eachSettingNode |
+		storedSettings 
+			detect: [ :eachStoredSetting | eachStoredSetting isForSettingNode: eachSettingNode ]
+			ifFound: [ :storedSetting | storedSetting updateSettingNode: eachSettingNode ]
+			ifNone: [ "ignore it" ] ] in SystemSettingsPersistence>>updateSettingNodes: in Block: [ :storedSetting | storedSetting updateSettingNode...etc...
+FullBlockClosure(BlockClosure)>>cull:
+[ :each | 
+			(aBlock value: each)
+				ifTrue: [ ^ foundBlock cull: each ] ] in Array(Collection)>>detect:ifFound:ifNone: in Block: [ :each | ...
+Array(SequenceableCollection)>>do:
+Array(Collection)>>detect:ifFound:ifNone:
+[ :eachSettingNode |
+		storedSettings 
+			detect: [ :eachStoredSetting | eachStoredSetting isForSettingNode: eachSettingNode ]
+			ifFound: [ :storedSetting | storedSetting updateSettingNode: eachSettingNode ]
+			ifNone: [ "ignore it" ] ] in SystemSettingsPersistence>>updateSettingNodes: in Block: [ :eachSettingNode |...
+OrderedCollection>>do:
+SystemSettingsPersistence>>updateSettingNodes:
+SystemSettingsPersistence>>updateSettingNodes
+PhLSettingTree(SettingTree)>>updateSettingNodes
+PhLSettingBrowser>>loadSettings
+PhLSettingBrowser class>>launcherStartUp
+[ :c | c ifNotNil: [ c launcherStartUp ] ] in PhLStartupManager class>>startUp: in Block: [ :c | c ifNotNil: [ c launcherStartUp ] ]
+SortedCollection(OrderedCollection)>>do:
+PhLStartupManager class>>startUp:
+ClassSessionHandler>>startup:
+[ :each | each startup: isImageStarting ] in WorkingSession>>runStartup: in Block: [ :each | each startup: isImageStarting ]
+[aBlock value: each] in [ :each | 
+		[aBlock value: each] 
+			on: Exception
+			do: [ :error | self errorHandler handleError: error] ] in WorkingSession>>runList:do: in Block: [aBlock value: each]
+FullBlockClosure(BlockClosure)>>on:do:
+[0m[31m
+[0mProcess>>doTerminationFromAnotherProcess
+Process>>terminate
+PhLImageDescriptionUpdater>>terminateProcess
+PhLImageDescriptionUpdater>>image:description:
+PhLImageDescriptionUpdater class>>image:description:
+PhLImageDetailPresenter>>updateImageDescription:
+[ :text | self updateImageDescription: text ] in PhLImageDetailPresenter>>connectPresenters in Block: [ :text | self updateImageDescription: text ]
+FullBlockClosure(BlockClosure)>>cull:
+FullBlockClosure(BlockClosure)>>cull:cull:
+[ :block | block cull: self value cull: oldValue ] in ObservableValueHolder>>valueChanged: in Block: [ :block | block cull: self value cull: oldValue ]...etc...
+OrderedCollection>>do:
+ObservableValueHolder>>valueChanged:
+[ | oldValue |
+	oldValue := value.
+	value := anObject.
+	self valueChanged: oldValue ] in ObservableValueHolder>>value: in Block: [ | oldValue |...
+FullBlockClosure(BlockClosure)>>ensure:
+ObservableValueHolder>>value:
+SpTextPresenter(SpAbstractTextPresenter)>>text:
+[
+		self presenter text: aString.
+		"Raise an announcement"
+		self presenter changed: #clearUserEdits] in SpMorphicTextAdapter(SpMorphicBaseTextAdapter)>>accept:notifying: in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+SpMorphicTextAdapter(SpMorphicBaseTextAdapter)>>accept:notifying:
+SpMorphicTextAdapter>>accept:notifying:
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>acceptTextInModel
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>acceptContents
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>textChanged
+RubTextScrollPane>>textChanged
+RubEditingArea(RubAbstractTextArea)>>paragraphReplacedTextFrom:to:with:
+[ 
+			self composer emphasisHere: textArea emphasisHere.
+			self composer replaceFrom: start to: stop with: aText.
+			self text: self composer text.
+			textArea paragraphWasComposedFrom: start to: stop.
+			textArea paragraphReplacedTextFrom: start to: stop with: aText ] in RubParagraph>>replaceFrom:to:with: in Block: [ ...
+FullBlockClosure(BlockClosure)>>ensure:
+RubParagraph>>disableDrawingWhile:
+RubParagraph>>replaceFrom:to:with:
+RubCurrentLineBarDecorator(RubParagraphDecorator)>>replaceFrom:to:with:
+[0m[31m
+[0mProcess>>doTerminationFromAnotherProcess
+Process>>terminate
+PhLImageDescriptionUpdater>>terminateProcess
+PhLImageDescriptionUpdater>>image:description:
+PhLImageDescriptionUpdater class>>image:description:
+PhLImageDetailPresenter>>updateImageDescription:
+[ :text | self updateImageDescription: text ] in PhLImageDetailPresenter>>connectPresenters in Block: [ :text | self updateImageDescription: text ]
+FullBlockClosure(BlockClosure)>>cull:
+FullBlockClosure(BlockClosure)>>cull:cull:
+[ :block | block cull: self value cull: oldValue ] in ObservableValueHolder>>valueChanged: in Block: [ :block | block cull: self value cull: oldValue ]...etc...
+OrderedCollection>>do:
+ObservableValueHolder>>valueChanged:
+[ | oldValue |
+	oldValue := value.
+	value := anObject.
+	self valueChanged: oldValue ] in ObservableValueHolder>>value: in Block: [ | oldValue |...
+FullBlockClosure(BlockClosure)>>ensure:
+ObservableValueHolder>>value:
+SpTextPresenter(SpAbstractTextPresenter)>>text:
+[
+		self presenter text: aString.
+		"Raise an announcement"
+		self presenter changed: #clearUserEdits] in SpMorphicTextAdapter(SpMorphicBaseTextAdapter)>>accept:notifying: in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+SpMorphicTextAdapter(SpMorphicBaseTextAdapter)>>accept:notifying:
+SpMorphicTextAdapter>>accept:notifying:
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>acceptTextInModel
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>acceptContents
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>textChanged
+RubTextScrollPane>>textChanged
+RubEditingArea(RubAbstractTextArea)>>paragraphReplacedTextFrom:to:with:
+[ 
+			self composer emphasisHere: textArea emphasisHere.
+			self composer replaceFrom: start to: stop with: aText.
+			self text: self composer text.
+			textArea paragraphWasComposedFrom: start to: stop.
+			textArea paragraphReplacedTextFrom: start to: stop with: aText ] in RubParagraph>>replaceFrom:to:with: in Block: [ ...
+FullBlockClosure(BlockClosure)>>ensure:
+RubParagraph>>disableDrawingWhile:
+RubParagraph>>replaceFrom:to:with:
+RubCurrentLineBarDecorator(RubParagraphDecorator)>>replaceFrom:to:with:
+[0m[31m
+[0mProcess>>doTerminationFromAnotherProcess
+Process>>terminate
+PhLImageDescriptionUpdater>>terminateProcess
+PhLImageDescriptionUpdater>>image:description:
+PhLImageDescriptionUpdater class>>image:description:
+PhLImageDetailPresenter>>updateImageDescription:
+[ :text | self updateImageDescription: text ] in PhLImageDetailPresenter>>connectPresenters in Block: [ :text | self updateImageDescription: text ]
+FullBlockClosure(BlockClosure)>>cull:
+FullBlockClosure(BlockClosure)>>cull:cull:
+[ :block | block cull: self value cull: oldValue ] in ObservableValueHolder>>valueChanged: in Block: [ :block | block cull: self value cull: oldValue ]...etc...
+OrderedCollection>>do:
+ObservableValueHolder>>valueChanged:
+[ | oldValue |
+	oldValue := value.
+	value := anObject.
+	self valueChanged: oldValue ] in ObservableValueHolder>>value: in Block: [ | oldValue |...
+FullBlockClosure(BlockClosure)>>ensure:
+ObservableValueHolder>>value:
+SpTextPresenter(SpAbstractTextPresenter)>>text:
+[
+		self presenter text: aString.
+		"Raise an announcement"
+		self presenter changed: #clearUserEdits] in SpMorphicTextAdapter(SpMorphicBaseTextAdapter)>>accept:notifying: in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+SpMorphicTextAdapter(SpMorphicBaseTextAdapter)>>accept:notifying:
+SpMorphicTextAdapter>>accept:notifying:
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>acceptTextInModel
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>acceptContents
+SpRubScrolledTextMorph(RubScrolledTextMorph)>>textChanged
+RubTextScrollPane>>textChanged
+RubEditingArea(RubAbstractTextArea)>>paragraphReplacedTextFrom:to:with:
+[ 
+			self composer emphasisHere: textArea emphasisHere.
+			self composer replaceFrom: start to: stop with: aText.
+			self text: self composer text.
+			textArea paragraphWasComposedFrom: start to: stop.
+			textArea paragraphReplacedTextFrom: start to: stop with: aText ] in RubParagraph>>replaceFrom:to:with: in Block: [ ...
+FullBlockClosure(BlockClosure)>>ensure:
+RubParagraph>>disableDrawingWhile:
+RubParagraph>>replaceFrom:to:with:
+RubCurrentLineBarDecorator(RubParagraphDecorator)>>replaceFrom:to:with:
+[0m

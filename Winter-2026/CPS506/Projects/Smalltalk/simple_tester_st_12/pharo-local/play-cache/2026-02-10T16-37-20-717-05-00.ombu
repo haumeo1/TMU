@@ -1,0 +1,7 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2026-02-10T16:38:07.139-05:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '" \tExecute this code to run the tests. You MUST run the tests using this\r\tplayground script. Running the tests from the \tsystem browser, as you \r\tdid in Lab 2, will not work. "\r\r| log t_small t_medium t_large t_mega t_giga |\r\rTranscript clear.\rlog := SegmentsLog new.\rSegmentsTest defaultTimeLimitSecs: 30.\r\r" Create and run all tests "\rt_small  := (SegmentsTest selector: #test_1_small).  t_small  setLog: log; run.\rt_medium := (SegmentsTest selector: #test_2_medium). t_medium setLog: log; run.\rt_large  := (SegmentsTest selector: #test_3_large).  t_large  setLog: log; run.\rt_mega   := (SegmentsTest selector: #test_4_mega).   t_mega   setLog: log; run.\rt_giga   := (SegmentsTest selector: #test_5_giga).   t_giga   setLog: log; run.\r\r" Print results of all tests "\rTranscript show: log get_all; cr.\r\r" Write log to file "\r\'st_log.txt\' asFileReference writeStreamDo: [ :stream | stream << log get_all ].\r'
+}

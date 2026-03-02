@@ -1,0 +1,19 @@
+PhLImage {
+	#formatNumber : 68021,
+	#architecture : '64',
+	#pharoVersion : '120',
+	#originTemplate : PhLRemoteTemplate {
+		#name : 'Pharo 12.0 - 64bit (old stable)',
+		#url : URL [ 'https://files.pharo.org/image/120/latest-64.zip' ]
+	},
+	#vmManager : PhLVirtualMachineManager {
+		#imageFile : FileLocator {
+			#path : RelativePath [ 'GitHub', 'Toronto-Metropolitan-University', 'Winter-2026', 'CPS506', 'Projects', 'Smalltalk', 'simple_tester_st_12', 'Segments.image' ],
+			#origin : #documents
+		},
+		#imageFormatNumber : 68021,
+		#imageVersion : '120'
+	},
+	#launchConfigurations : OrderedCollection [ ],
+	#shouldRunInitializationScript : false
+}

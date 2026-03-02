@@ -1,0 +1,851 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-e35513ca60.36C9915EE836A8C0', '1' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpPackageAddition {
+		#packageName : #CPS506
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpPackageTagAddition {
+		#packageTagName : #Uncategorized,
+		#packageName : #CPS506
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #TestCase,
+				#definitionSource : 'TestCase << #SegmentsTest\r\tslots: { #log };\r\tpackage: \'CPS506\'',
+				#traitCompositionSource : '{}'
+			},
+			#name : #SegmentsTest,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsTest
+					},
+					#name : #log,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'TestCase class << SegmentsTest class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'SegmentsTest class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #SegmentsTest
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #CPS506,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #TestCase,
+				#definitionSource : 'TestCase << #SegmentsTest\r\tslots: { #log };\r\tpackage: \'CPS506\'',
+				#traitCompositionSource : '{}'
+			},
+			#name : #SegmentsTest,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsTest
+					},
+					#name : #log,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'TestCase class << SegmentsTest class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'SegmentsTest class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #SegmentsTest
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #CPS506,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #tests
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsTest
+			},
+			#name : #test_2_medium,
+			#protocol : #tests,
+			#sourceCode : 'test_2_medium\r\t\r\t| rng n k nlines time |\r\t\r\tk := 1.\r\tn := 0.\r\tnlines := 10.\r\trng := Random seed: 42 + nlines.\r\t\r\tlog set_medium: \'MEDIUM - 10 LINES:\' , String cr.\r\ttime := Time microsecondClockValue.\r\t1 to: k do:\t[ :i | \r\t\t| dirs lines x y dx dy sol result p1 p2 result_string |\r\t\tdirs  := \'\'.\r\t\tlines := OrderedCollection new.\r\t\tnlines timesRepeat: [ lines add: ((1 to: 10) atRandom: rng). \r\t\t\t\t\t\t  dirs := dirs , (\'UDLR\' atRandom: rng) asString ].\r\t\tlines := lines asArray.\r\t\tx := (-10 to: 10) atRandom: rng. dx := x.\r\t\ty := (-10 to: 10) atRandom: rng. dy := y.\r\t\t \t\r\t\t1 to: lines size do: [ :j |\t| ch ln |\r\t\t\tch := dirs at: j.\tln := lines at: j.\r\t\t\tch = $U ifTrue: [ dy := dy + ln ]. ch = $D ifTrue: [ dy := dy - ln ].\r\t\t\tch = $R ifTrue: [ dx := dx + ln ]. ch = $L ifTrue: [ dx := dx - ln ].\r\t\t].\t\r\t\t\r\t\tp1 := x@y. p2 := dx@dy.\r\t\r\t\tsol := (Segments connect: p1 to: p2 using: lines). \r\t\tresult := self verify: sol connects: p1 to: p2 using: lines. \r\t\tresult_string := \'  Test \' , i asString , \': \' , p1 asString , \', \' , p2 asString , \', \' , lines asString , String cr.\r\t\tresult_string := result_string , \'    You returned \' , sol asString , String cr.\r\t\tresult_string := result_string , \'    \' , result asString , String cr.\r\t\tlog set_medium: (log get_medium , result_string ).\r\t\r\t\tresult = \'PASSED!\' ifTrue: [ n := n + 1. ].\r\t\t"self assert: (result = \'PASSED!\')."\r\t\t"Transcript show: result_string; cr."\r\t\t\t\t\r\t].\r\ttime := Time microsecondClockValue - time // 1000.\r\tlog set_medium: (log get_medium , \'  PASSED \' , n asString , \'/\' , k asString , \' in \' , time asString , \'ms\' , String cr ).\r\t\r\t"passed n out of k tests in time ms"\r\t^ true\r\t\r\t\r\t',
+			#stamp : 'AU 1/30/2026 11:54',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsTest
+			},
+			#name : #test_4_mega,
+			#protocol : #tests,
+			#sourceCode : 'test_4_mega\r\t\r\t| rng n k nlines time |\r\t\r\tk := 1.\r\tn := 0.\r\tnlines := 50.\r\trng := Random seed: 42 + nlines.\r\t\r\tlog set_mega: \'MEGA - 50 LINES:\' , String cr.\r\ttime := Time microsecondClockValue.\r\t1 to: k do:\t[ :i | \r\t\t| dirs lines x y dx dy sol result p1 p2 result_string |\r\t\tdirs  := \'\'.\r\t\tlines := OrderedCollection new.\r\t\tnlines timesRepeat: [ lines add: ((1 to: 10) atRandom: rng). \r\t\t\t\t\t\t  dirs := dirs , (\'UDLR\' atRandom: rng) asString ].\r\t\tlines := lines asArray.\r\t\tx := (-10 to: 10) atRandom: rng. dx := x.\r\t\ty := (-10 to: 10) atRandom: rng. dy := y.\r\t\t \t\r\t\t1 to: lines size do: [ :j |\t| ch ln |\r\t\t\tch := dirs at: j.\tln := lines at: j.\r\t\t\tch = $U ifTrue: [ dy := dy + ln ]. ch = $D ifTrue: [ dy := dy - ln ].\r\t\t\tch = $R ifTrue: [ dx := dx + ln ]. ch = $L ifTrue: [ dx := dx - ln ].\r\t\t].\t\r\t\t\r\t\tp1 := x@y. p2 := dx@dy.\r\t\r\t\tsol := (Segments connect: p1 to: p2 using: lines). \r\t\tresult := self verify: sol connects: p1 to: p2 using: lines. \r\t\tresult_string := \'  Test \' , i asString , \': \' , p1 asString , \', \' , p2 asString , \', \' , lines asString , String cr.\r\t\tresult_string := result_string , \'    You returned \' , sol asString , String cr.\r\t\tresult_string := result_string , \'    \' , result asString , String cr.\r\t\tlog set_mega: (log get_mega , result_string ).\r\t\r\t\tresult = \'PASSED!\' ifTrue: [ n := n + 1. ].\r\t\t"self assert: (result = \'PASSED!\')."\r\t\t"Transcript show: result_string; cr."\r\t\t\t\t\r\t].\r\ttime := Time microsecondClockValue - time // 1000.\r\tlog set_mega: (log get_mega , \'  PASSED \' , n asString , \'/\' , k asString , \' in \' , time asString , \'ms\' , String cr ).\r\t\r\t^ true\r\t\r\t\r\t',
+			#stamp : 'AU 1/30/2026 11:54',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsTest
+			},
+			#name : #test_3_large,
+			#protocol : #tests,
+			#sourceCode : 'test_3_large\r\t\r\t| rng n k nlines time |\r\t\r\tk := 1.\r\tn := 0.\r\tnlines := 20.\r\trng := Random seed: 42 + nlines.\r\t\r\tlog set_large: \'LARGE - 20 LINES:\' , String cr.\r\ttime := Time microsecondClockValue.\r\t1 to: k do:\t[ :i | \r\t\t| dirs lines x y dx dy sol result p1 p2 result_string |\r\t\tdirs  := \'\'.\r\t\tlines := OrderedCollection new.\r\t\tnlines timesRepeat: [ lines add: ((1 to: 10) atRandom: rng). \r\t\t\t\t\t\t  dirs := dirs , (\'UDLR\' atRandom: rng) asString ].\r\t\tlines := lines asArray.\r\t\tx := (-10 to: 10) atRandom: rng. dx := x.\r\t\ty := (-10 to: 10) atRandom: rng. dy := y.\r\t\t \t\r\t\t1 to: lines size do: [ :j |\t| ch ln |\r\t\t\tch := dirs at: j.\tln := lines at: j.\r\t\t\tch = $U ifTrue: [ dy := dy + ln ]. ch = $D ifTrue: [ dy := dy - ln ].\r\t\t\tch = $R ifTrue: [ dx := dx + ln ]. ch = $L ifTrue: [ dx := dx - ln ].\r\t\t].\t\r\t\t\r\t\tp1 := x@y. p2 := dx@dy.\r\t\r\t\tsol := (Segments connect: p1 to: p2 using: lines). \r\t\tresult := self verify: sol connects: p1 to: p2 using: lines. \r\t\tresult_string := \'  Test \' , i asString , \': \' , p1 asString , \', \' , p2 asString , \', \' , lines asString , String cr.\r\t\tresult_string := result_string , \'    You returned \' , sol asString , String cr.\r\t\tresult_string := result_string , \'    \' , result asString , String cr.\r\t\tlog set_large: (log get_large , result_string ).\r\t\r\t\tresult = \'PASSED!\' ifTrue: [ n := n + 1. ].\r\t\t"self assert: (result = \'PASSED!\')."\r\t\t"Transcript show: result_string; cr."\r\t\t\t\t\r\t].\r\ttime := Time microsecondClockValue - time // 1000.\r\tlog set_large: (log get_large , \'  PASSED \' , n asString , \'/\' , k asString , \' in \' , time asString , \'ms\' , String cr ).\r\t\r\t^ true\r\t\r\t\r\t',
+			#stamp : 'AU 1/30/2026 11:54',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsTest
+			},
+			#name : #test_1_small,
+			#protocol : #tests,
+			#sourceCode : 'test_1_small\r\t\r\t| rng n k nlines time |\r\t\r\tk := 1.\r\tn := 0.\r\tnlines := 5.\r\trng := Random seed: 42 + nlines.\r\t\r\tlog set_small: \'SMALL - 5 LINES:\' , String cr.\r\ttime := Time microsecondClockValue.\r\t1 to: k do:\t[ :i | \r\t\t| dirs lines x y dx dy sol result p1 p2 result_string |\r\t\tdirs  := \'\'.\r\t\tlines := OrderedCollection new.\r\t\tnlines timesRepeat: [ lines add: ((1 to: 10) atRandom: rng). \r\t\t\t\t\t\t  dirs := dirs , (\'UDLR\' atRandom: rng) asString ].\r\t\tlines := lines asArray.\r\t\tx := (-10 to: 10) atRandom: rng. dx := x.\r\t\ty := (-10 to: 10) atRandom: rng. dy := y.\r\t\t \t\r\t\t1 to: lines size do: [ :j |\t| ch ln |\r\t\t\tch := dirs at: j.\tln := lines at: j.\r\t\t\tch = $U ifTrue: [ dy := dy + ln ]. ch = $D ifTrue: [ dy := dy - ln ].\r\t\t\tch = $R ifTrue: [ dx := dx + ln ]. ch = $L ifTrue: [ dx := dx - ln ].\r\t\t].\t\r\t\t\r\t\tp1 := x@y. p2 := dx@dy.\r\t\r\t\tsol := (Segments connect: p1 to: p2 using: lines). \r\t\tresult := self verify: sol connects: p1 to: p2 using: lines. \r\t\tresult_string := \'  Test \' , i asString , \': \' , p1 asString , \', \' , p2 asString , \', \' , lines asString , String cr.\r\t\tresult_string := result_string , \'    You returned \' , sol asString , String cr.\r\t\tresult_string := result_string , \'    \' , result asString , String cr.\r\t\tlog set_small: (log get_small , result_string ).\r\t\r\t\tresult = \'PASSED!\' ifTrue: [ n := n + 1. ].\r\t\t"self assert: (result = \'PASSED!\')."\r\t\t"Transcript show: result_string; cr."\r\t\t\t\t\r\t].\r\ttime := Time microsecondClockValue - time // 1000.\r\tlog set_small: (log get_small , \'  PASSED \' , n asString , \'/\' , k asString , \' in \' , time asString , \'ms\' , String cr ).\r\t\r\t"passed n out of k tests in time ms"\r\t^ true\r\t\r\t\r\t',
+			#stamp : 'AU 1/30/2026 11:54',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsTest
+			},
+			#name : #test_5_giga,
+			#protocol : #tests,
+			#sourceCode : 'test_5_giga\r\t\r\t| rng n k nlines time |\r\t\r\tk := 1.\r\tn := 0.\r\tnlines := 100.\r\trng := Random seed: 42 + nlines.\r\t\r\tlog set_giga: \'GIGA - 100 LINES:\' , String cr.\r\ttime := Time microsecondClockValue.\r\t1 to: k do:\t[ :i | \r\t\t| dirs lines x y dx dy sol result p1 p2 result_string |\r\t\tdirs  := \'\'.\r\t\tlines := OrderedCollection new.\r\t\tnlines timesRepeat: [ lines add: ((1 to: 10) atRandom: rng). \r\t\t\t\t\t\t  dirs := dirs , (\'UDLR\' atRandom: rng) asString ].\r\t\tlines := lines asArray.\r\t\tx := (-10 to: 10) atRandom: rng. dx := x.\r\t\ty := (-10 to: 10) atRandom: rng. dy := y.\r\t\t \t\r\t\t1 to: lines size do: [ :j |\t| ch ln |\r\t\t\tch := dirs at: j.\tln := lines at: j.\r\t\t\tch = $U ifTrue: [ dy := dy + ln ]. ch = $D ifTrue: [ dy := dy - ln ].\r\t\t\tch = $R ifTrue: [ dx := dx + ln ]. ch = $L ifTrue: [ dx := dx - ln ].\r\t\t].\t\r\t\t\r\t\tp1 := x@y. p2 := dx@dy.\r\t\r\t\tsol := (Segments connect: p1 to: p2 using: lines). \r\t\tresult := self verify: sol connects: p1 to: p2 using: lines. \r\t\tresult_string := \'  Test \' , i asString , \': \' , p1 asString , \', \' , p2 asString , \', \' , lines asString , String cr.\r\t\tresult_string := result_string , \'    You returned \' , sol asString , String cr.\r\t\tresult_string := result_string , \'    \' , result asString , String cr.\r\t\tlog set_giga: (log get_giga , result_string ).\r\t\r\t\tresult = \'PASSED!\' ifTrue: [ n := n + 1. ].\r\t\t"self assert: (result = \'PASSED!\')."\r\t\t"Transcript show: result_string; cr."\r\t\t\t\t\r\t].\r\ttime := Time microsecondClockValue - time // 1000.\r\tlog set_giga: (log get_giga , \'  PASSED \' , n asString , \'/\' , k asString , \' in \' , time asString , \'ms\' , String cr ).\r\t\r\t^ true\r\t\r\t\r\t',
+			#stamp : 'AU 1/30/2026 11:54',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #TestCase,
+				#definitionSource : 'TestCase << #SegmentsTest\r\tslots: { #log };\r\tpackage: \'CPS506\'',
+				#traitCompositionSource : '{}'
+			},
+			#name : #SegmentsTest,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsTest
+					},
+					#name : #log,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'TestCase class << SegmentsTest class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'SegmentsTest class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #SegmentsTest
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #CPS506,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #initialization
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsTest
+			},
+			#name : #'setLog:',
+			#protocol : #initialization,
+			#sourceCode : 'setLog: lg\r\tlog := lg.',
+			#stamp : 'AU 1/28/2026 14:36',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #TestCase,
+				#definitionSource : 'TestCase << #SegmentsTest\r\tslots: { #log };\r\tpackage: \'CPS506\'',
+				#traitCompositionSource : '{}'
+			},
+			#name : #SegmentsTest,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsTest
+					},
+					#name : #log,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'TestCase class << SegmentsTest class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'SegmentsTest class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #SegmentsTest
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #CPS506,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsTest
+			},
+			#name : #'verify:connects:to:using:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'verify: sol connects: p1 to: p2 using: lines\r\r\t| dx dy |\r\r\t"Check return type"\r\tsol isString ifFalse: [ ^\'FAILED: Return type must be String.\' ].\r\r\t"Check number of characters"\r\tsol size = lines size ifFalse: [ ^\'FAILED: Length of string should match number of lines.\' ]. \r\t\r\t"Check for bad characters"\r\t(sol reject: [ :c | \'UDRL\' includes: c ]) = \'\' ifFalse: [ ^\'FAILED: Solution should only contain U, D, R, L.\' ].\r\t\r\tdx := p1 x.\r\tdy := p1 y.\r\r\t1 to: lines size do: [ :i |\r\t\t| ch ln |\r\t\tch := sol at: i.\r\t\tln := lines at: i.\r\t\tch = $U ifTrue: [ dy := dy + ln ].\r\t\tch = $D ifTrue: [ dy := dy - ln ].\r\t\tch = $R ifTrue: [ dx := dx + ln ].\r\t\tch = $L ifTrue: [ dx := dx - ln ].\r\t].\r\r\t(dx = p2 x) & (dy = p2 y) ifFalse: [ ^\'FAILED: Finish point incorrect\' ]. \r\t\r \t^\'PASSED!\'\r\r\r',
+			#stamp : 'AU 1/28/2026 14:31',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#definitionSource : 'Object << #SegmentsLog\r\tslots: { #res_small . #res_medium . #res_large . #res_mega . #res_giga };\r\tpackage: \'CPS506\'',
+				#traitCompositionSource : '{}'
+			},
+			#name : #SegmentsLog,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_small,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_medium,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_large,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_mega,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_giga,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << SegmentsLog class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'SegmentsLog class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #SegmentsLog
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #CPS506,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#definitionSource : 'Object << #SegmentsLog\r\tslots: { #res_small . #res_medium . #res_large . #res_mega . #res_giga };\r\tpackage: \'CPS506\'',
+				#traitCompositionSource : '{}'
+			},
+			#name : #SegmentsLog,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_small,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_medium,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_large,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_mega,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #SegmentsLog
+					},
+					#name : #res_giga,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << SegmentsLog class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'SegmentsLog class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #SegmentsLog
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #CPS506,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #initialization
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #get_medium,
+			#protocol : #initialization,
+			#sourceCode : 'get_medium\r\t^res_medium',
+			#stamp : 'AU 1/30/2026 11:40',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #get_mega,
+			#protocol : #initialization,
+			#sourceCode : 'get_mega\r\t^res_mega',
+			#stamp : 'AU 1/28/2026 14:33',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #'set_small:',
+			#protocol : #initialization,
+			#sourceCode : 'set_small: result\r\tres_small := result',
+			#stamp : 'AU 1/28/2026 14:32',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #get_small,
+			#protocol : #initialization,
+			#sourceCode : 'get_small\r\t^res_small',
+			#stamp : 'AU 1/28/2026 14:33',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #'set_large:',
+			#protocol : #initialization,
+			#sourceCode : 'set_large: result\r\tres_large := result',
+			#stamp : 'AU 1/28/2026 14:32',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #get_all,
+			#protocol : #initialization,
+			#sourceCode : 'get_all\r   | nl |\r\tnl := String cr.\r\t^ self get_small, nl, self get_medium, nl, self get_large, nl, self get_mega, nl, self get_giga.',
+			#stamp : 'AU 1/28/2026 14:34',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #'set_giga:',
+			#protocol : #initialization,
+			#sourceCode : 'set_giga: result\r\tres_giga := result',
+			#stamp : 'AU 1/28/2026 14:32',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #'set_medium:',
+			#protocol : #initialization,
+			#sourceCode : 'set_medium: result\r\tres_medium := result',
+			#stamp : 'AU 1/28/2026 14:32',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #'set_mega:',
+			#protocol : #initialization,
+			#sourceCode : 'set_mega: result\r\tres_mega := result',
+			#stamp : 'AU 1/28/2026 14:32',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #get_large,
+			#protocol : #initialization,
+			#sourceCode : 'get_large\r\t^res_large',
+			#stamp : 'AU 1/28/2026 14:33',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #SegmentsLog
+			},
+			#name : #get_giga,
+			#protocol : #initialization,
+			#sourceCode : 'get_giga\r\t^res_giga',
+			#stamp : 'AU 1/28/2026 14:32',
+			#package : #CPS506
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#definitionSource : 'Object << #Segments\r\tslots: {};\r\tpackage: \'CPS506\'',
+				#traitCompositionSource : '{}'
+			},
+			#name : #Segments,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Segments class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Segments class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #Segments
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #CPS506,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '27' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << Segments class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'Segments class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#superclassName : #Object,
+					#definitionSource : 'Object << #Segments\r\tslots: {};\r\tpackage: \'CPS506\'',
+					#traitCompositionSource : '{}'
+				},
+				#name : #Segments,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #Segments
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #CPS506,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'Segments class'
+			},
+			#name : #'connect:to:using:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'connect: start to: end using: lines\r\r\t" Your code here "\r\r\t^\'URD\'',
+			#stamp : 'AU 1/30/2026 11:19',
+			#package : #CPS506
+		}
+	}
+}
