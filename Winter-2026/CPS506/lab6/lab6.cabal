@@ -1,0 +1,22 @@
+cabal-version:          2.4
+name:                   lab6
+version:                0.1.0.0
+
+library lab6-lib
+    exposed-modules:    Lab6
+    hs-source-dirs:     lib
+    build-depends:      base >=4.14.3.0
+    default-language:   Haskell2010
+
+executable lab6
+    main-is:            Main.hs
+    build-depends:      base >=4.14.3.0,
+    hs-source-dirs:     app
+    default-language:   Haskell2010
+
+test-Suite lab6-tests
+    type:               exitcode-stdio-1.0
+    main-is:            Lab6Test.hs
+    build-depends:      base, HUnit, lab6-lib
+    hs-source-dirs:     tests
+    default-language:   Haskell2010
